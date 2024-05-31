@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-image: url(table.jpg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.calculator {
+    background-color: #292929;
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    padding: 30px;
+    box-shadow: 30px 30px 90px rgba(0, 0, 0, 0.9),
+            10px 10px 70px rgba(0, 0, 0, 0.9),
+            inset -5px -5px 15px rgba(0, 0, 0, 0.4),
+            inset 5px 5px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    display: grid;
+    margin-right: 25%;
+}
+
+.calculator input {
+    position: relative;
+    grid-column: span 4;
+    height: 80px;
+    width: calc(100% - 25px);
+    left: 12px;
+    border: none;
+    outline: none;
+    background-color: #a4ac78;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1.7em;
+    text-align: right;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.7);
+}
+
+.calculator input::placeholder {
+    color: #292929;
+}
+
+.calculator button {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 7px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #2e2e2e, #3b3b3b);
+    color: #fff;
+    box-shadow: inset -7px 0 7px rgba(0, 0, 0, 0.2),
+            inset 0 -7px 7px rgba(0, 0, 0, 0.3),
+            0 0 0 2px rgba(0, 0, 0, 0.7),
+            10px 20px 30px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.calculator button::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #292929, #444);
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.2),
+            10px 5px 10px rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.calculator button span {
+    position: relative;
+    font-size: 1.7em;
+}
+
+.calculator button:active {
+    filter: brightness(1.5);
+}
+
+.calculator button.clear,
+.calculator button.delete {
+    background: #f00;
+}
+
+.calculator button.clear::before,
+.calculator button.delete::before {
+    background: linear-gradient(90deg, #d20000, rgba(255, 255, 255, 0.4));
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calculator button.plus {
+    grid-row: span 2;
+    height: 160px;
+}
+
+.calculator button.equal {
+    background: #107ad1;
+}
+
+.calculator button.equal::before {
+    background: linear-gradient(90deg, #1877c5, rgba(255, 255, 255, 0.4));
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calculator button.operator {
+    background: #bebebe;
+    color: #000;
+}
+
+.calculator button.operator::before {
+    background: linear-gradient(90deg, #a9a9a9, rgba(255, 255, 255, 0.4));
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
